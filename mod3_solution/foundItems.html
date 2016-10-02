@@ -1,0 +1,20 @@
+<div class="clearleft">
+  <div ng-repeat="item in dirCtrl.items" class="clearleft clearfix" ng-class-even="'background-even'">
+    <div class="col-lg-3 col-md-3 col-xs-6">
+      {{item.name}}
+    </div>
+    <div class="col-lg-1 col-md-1 col-xs-6">
+      {{item.short_name}}
+    </div>
+    <div class="col-lg-5 col-md-5 col-xs-6">
+      {{item.description}}
+    </div>
+    <div class="col-lg-3 col-md-3 col-xs-6">
+      <button class="btn btn-primary" ng-click="dirCtrl.onRemove({index: $index})" style="margin: 2px 0 2px;">
+        Don't want this one!</button>
+    </div>
+  </div>
+  <div ng-if="dirCtrl.items.length === 0" style="color:red;">
+    Nothing found
+  </div>
+</div>
